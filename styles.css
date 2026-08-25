@@ -551,6 +551,39 @@ body {
 }
 .contact-line:hover { border-color: var(--accent); transform: translateX(4px); }
 
+/* Social links */
+.social-links { margin-top: 28px; }
+.social-label {
+  display: block;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+.social-row { display: flex; gap: 12px; flex-wrap: wrap; }
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  transition: all .25s ease;
+}
+.social-icon svg { width: 20px; height: 20px; }
+.social-icon:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(230,57,70,.25);
+}
+
 .contact-form {
   background: var(--surface);
   border: 1px solid var(--border);

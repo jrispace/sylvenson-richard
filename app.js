@@ -103,5 +103,44 @@ const io = new IntersectionObserver(
 );
 revealTargets.forEach((el) => io.observe(el));
 
+/* ---------- Contact form (Web3Forms) ---------- */
+const contactForm = document.getElementById('contactForm');
+const formFeedback = document.getElementById('formFeedback');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const origText = submitBtn.textContent;
+    submitBtn.textContent = '...';
+    submitBtn.disabled = true;
+    formFeedback.className = 'form-feedback';
+    formFeedback.textContent = '';
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: new FormData(contactForm)
+      });
+      const data = await res.json();
+
+      if (res.ok && data.success !== false) {
+        formFeedback.textContent = I18N[currentLang]['ct.success'] || 'Message sent!';
+        formFeedback.className = 'form-feedback success';
+        contactForm.reset();
+      } else {
+        formFeedback.textContent = (I18N[currentLang]['ct.error'] || 'Error: ') + (data.message || '');
+        formFeedback.className = 'form-feedback error';
+      }
+    } catch {
+      formFeedback.textContent = I18N[currentLang]['ct.error'] || 'Something went wrong. Please try again.';
+      formFeedback.className = 'form-feedback error';
+    }
+
+    submitBtn.textContent = origText;
+    submitBtn.disabled = false;
+  });
+}
+
 /* ---------- Init ---------- */
 applyLang(currentLang);

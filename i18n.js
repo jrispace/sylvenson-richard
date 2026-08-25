@@ -45,6 +45,8 @@ const I18N = {
     'ct.p': "Whether it's a website, an app, or an AI-powered system — tell me the goal, and I'll engineer the path to it.",
     'ct.name': 'Your name', 'ct.email': 'Your email', 'ct.subject': 'Subject',
     'ct.msg': 'Tell me about your project...', 'ct.send': 'Send Message',
+    'ct.success': 'Message sent! I\'ll get back to you shortly.',
+    'ct.error': 'Error: ',
     'ft.rights': 'All rights reserved',
     typing: ['AI Solutions Architect', 'Industrial Engineer', 'Web & App Developer']
   },
@@ -92,6 +94,8 @@ const I18N = {
     'ct.p': "Site web, application ou système propulsé par l'IA — dites-moi l'objectif, et je tracerai le chemin.",
     'ct.name': 'Votre nom', 'ct.email': 'Votre email', 'ct.subject': 'Sujet',
     'ct.msg': 'Parlez-moi de votre projet...', 'ct.send': 'Envoyer le message',
+    'ct.success': 'Message envoyé ! Je vous répondrai sous peu.',
+    'ct.error': 'Erreur : ',
     'ft.rights': 'Tous droits réservés',
     typing: ['Architecte Solutions IA', 'Ingénieur Industriel', 'Développeur Web & App']
   },
@@ -139,6 +143,8 @@ const I18N = {
     'ct.p': 'Kit se yon sit web, yon aplikasyon, oswa yon sistèm ki gen pwisans IA — di m objektif la, m ap jenje wout la.',
     'ct.name': 'Non ou', 'ct.email': 'Imèl ou', 'ct.subject': 'Sijè',
     'ct.msg': 'Rakonte m sou pwojè ou...', 'ct.send': 'Voye mesaj',
+    'ct.success': 'Mesaj voye! M ap reponn ou byento.',
+    'ct.error': 'Erè: ',
     'ft.rights': 'Tout dwa rezève',
     typing: ['Achitek Solisyon IA', 'Jenie Endistriyel', 'Devlopè Web & App']
   },
@@ -186,6 +192,8 @@ const I18N = {
     'ct.p': 'Ya sea un sitio web, una app o un sistema con IA — dime el objetivo y yo diseño el camino hacia él.',
     'ct.name': 'Tu nombre', 'ct.email': 'Tu email', 'ct.subject': 'Asunto',
     'ct.msg': 'Cuéntame sobre tu proyecto...', 'ct.send': 'Enviar mensaje',
+    'ct.success': '¡Mensaje enviado! Te responderé pronto.',
+    'ct.error': 'Error: ',
     'ft.rights': 'Todos los derechos reservados',
     typing: ['Arquitecto de Soluciones IA', 'Ingeniero Industrial', 'Desarrollador Web & App']
   }

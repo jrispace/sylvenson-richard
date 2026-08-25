@@ -580,6 +580,47 @@ body {
   box-shadow: 0 0 0 3px rgba(230,57,70,.12);
 }
 
+/* Honeypot — hidden from humans, visible to bots */
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Form feedback messages */
+.form-feedback {
+  margin-top: 12px;
+  padding: 0;
+  font-size: 0;
+  opacity: 0;
+  transition: all .35s ease;
+}
+.form-feedback.success,
+.form-feedback.error {
+  padding: 14px 18px;
+  border-radius: 10px;
+  font-size: 14px;
+  opacity: 1;
+}
+.form-feedback.success {
+  background: rgba(16,185,129,.1);
+  border: 1px solid rgba(16,185,129,.3);
+  color: #10b981;
+}
+.form-feedback.error {
+  background: rgba(230,57,70,.1);
+  border: 1px solid rgba(230,57,70,.3);
+  color: var(--accent);
+}
+.contact-form button:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
 /* ===== FOOTER ===== */
 .footer {
   border-top: 1px solid var(--border);

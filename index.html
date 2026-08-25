@@ -298,14 +298,21 @@
           <a href="https://sylvensonrichard.com" class="contact-line"><span>👤</span> sylvensonrichard.com</a>
         </div>
       </div>
-      <form class="contact-form" onsubmit="event.preventDefault(); alert('Demo form — connect your email service here.');">
-        <div class="form-row">
-          <input type="text" data-i18n-ph="ct.name" placeholder="Your name" required>
-          <input type="email" data-i18n-ph="ct.email" placeholder="Your email" required>
+      <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="0bda76ea-fb1b-4fc4-8195-fc6bba9ce110">
+        <input type="hidden" name="subject" value="New message from ceo.jrispace.com">
+        <input type="hidden" name="from_name" value="JRiSpace Contact Form">
+        <!-- Honeypot anti-spam -->
+        <div class="hp-field" aria-hidden="true">
+          <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off">
         </div>
-        <input type="text" data-i18n-ph="ct.subject" placeholder="Subject">
-        <textarea rows="5" data-i18n-ph="ct.msg" placeholder="Tell me about your project..." required></textarea>
+        <div class="form-row">
+          <input type="text" name="name" data-i18n-ph="ct.name" placeholder="Your name" required>
+          <input type="email" name="email" data-i18n-ph="ct.email" placeholder="Your email" required>
+        </div>
+        <textarea rows="5" name="message" data-i18n-ph="ct.msg" placeholder="Tell me about your project..." required></textarea>
         <button type="submit" class="btn btn-primary" data-i18n="ct.send">Send Message</button>
+        <div class="form-feedback" id="formFeedback"></div>
       </form>
     </div>
   </div>

@@ -24,12 +24,29 @@
       </div>
     </a>
     <ul class="nav-links" id="navLinks">
+      <li class="drawer-head">
+        <img src="sylvenson-ai.jpg" alt="Sylvenson AI" class="drawer-logo">
+        <div class="drawer-head-text">
+          <strong>Sylvenson <span class="accent">Richard</span></strong>
+          <span>AI Solutions Architect</span>
+        </div>
+      </li>
       <li><a href="#about" data-i18n="nav.about">About</a></li>
       <li><a href="#expertise" data-i18n="nav.expertise">Expertise</a></li>
       <li><a href="#services" data-i18n="nav.services">Services</a></li>
       <li><a href="#work" data-i18n="nav.work">Work</a></li>
       <li><a href="#contact" class="nav-cta" data-i18n="nav.contact">Contact</a></li>
+      <li class="drawer-foot">
+        <div class="lang-switcher lang-switcher-mobile">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="fr">FR</button>
+          <button class="lang-btn" data-lang="ht">HT</button>
+          <button class="lang-btn" data-lang="es">ES</button>
+        </div>
+        <a href="mailto:hello@sylvensonrichard.com" class="drawer-mail">hello@sylvensonrichard.com</a>
+      </li>
     </ul>
+    <div class="nav-overlay" id="navOverlay"></div>
     <div class="nav-right">
       <div class="lang-switcher" id="langSwitcher">
         <button class="lang-btn active" data-lang="en">EN</button>
@@ -293,6 +310,30 @@
     </div>
   </div>
 </section>
+
+<!-- ===== BOTTOM NAV (mobile) ===== -->
+<nav class="bottom-nav" id="bottomNav" aria-label="Mobile navigation">
+  <a href="#hero" class="bottom-nav-item active" data-section="hero">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h5v-6h4v6h5V9.5"/></svg>
+    <span data-i18n="bnav.home">Home</span>
+  </a>
+  <a href="#about" class="bottom-nav-item" data-section="about">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg>
+    <span data-i18n="bnav.about">About</span>
+  </a>
+  <a href="#services" class="bottom-nav-item" data-section="services">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.5"/></svg>
+    <span data-i18n="bnav.services">Services</span>
+  </a>
+  <a href="#work" class="bottom-nav-item" data-section="work">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+    <span data-i18n="bnav.work">Work</span>
+  </a>
+  <a href="#contact" class="bottom-nav-item" data-section="contact">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+    <span data-i18n="bnav.contact">Contact</span>
+  </a>
+</nav>
 
 <!-- ===== FOOTER ===== -->
 <footer class="footer">

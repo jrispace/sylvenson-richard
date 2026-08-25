@@ -53,7 +53,7 @@ function restartTyping() {
   tick();
 }
 
-/* ---------- Navbar ---------- */
+/* ---------- Navbar & mobile drawer ---------- */
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 40);
@@ -61,10 +61,38 @@ window.addEventListener('scroll', () => {
 
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
-navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+const navOverlay = document.getElementById('navOverlay');
+
+function setDrawer(open) {
+  navLinks.classList.toggle('open', open);
+  navToggle.classList.toggle('open', open);
+  navOverlay.classList.toggle('show', open);
+  document.body.classList.toggle('nav-locked', open);
+}
+navToggle.addEventListener('click', () => setDrawer(!navLinks.classList.contains('open')));
+navOverlay.addEventListener('click', () => setDrawer(false));
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setDrawer(false); });
 navLinks.querySelectorAll('a').forEach((a) =>
-  a.addEventListener('click', () => navLinks.classList.remove('open'))
+  a.addEventListener('click', () => setDrawer(false))
 );
+
+/* ---------- Bottom nav scroll-spy ---------- */
+const bottomItems = document.querySelectorAll('.bottom-nav-item');
+const spySections = ['hero', 'about', 'services', 'work', 'contact']
+  .map((id) => document.getElementById(id))
+  .filter(Boolean);
+
+function updateSpy() {
+  const pos = window.scrollY + window.innerHeight * 0.35;
+  let current = spySections[0];
+  for (const s of spySections) {
+    if (s.offsetTop <= pos) current = s;
+  }
+  bottomItems.forEach((it) => it.classList.toggle('active', it.dataset.section === current.id));
+}
+window.addEventListener('scroll', updateSpy, { passive: true });
+window.addEventListener('resize', updateSpy);
+updateSpy();
 
 /* ---------- Reveal on scroll ---------- */
 const revealTargets = document.querySelectorAll('.section-head, .about-grid, .exp-card, .srv-card, .process-step, .contact-grid');

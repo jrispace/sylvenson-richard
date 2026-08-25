@@ -2,6 +2,8 @@
    Author: JRiSpace | Sylvenson Richard */
 const I18N = {
   en: {
+    'bnav.home': 'Home', 'bnav.about': 'About', 'bnav.services': 'Services',
+    'bnav.work': 'Work', 'bnav.contact': 'Contact',
     'nav.about': 'About', 'nav.expertise': 'Expertise', 'nav.services': 'Services',
     'nav.work': 'Work', 'nav.contact': 'Contact',
     'hero.badge': 'Available for new projects', 'hero.hello': "I'm",
@@ -47,6 +49,8 @@ const I18N = {
     typing: ['AI Solutions Architect', 'Industrial Engineer', 'Web & App Developer']
   },
   fr: {
+    'bnav.home': 'Accueil', 'bnav.about': 'À propos', 'bnav.services': 'Services',
+    'bnav.work': 'Travaux', 'bnav.contact': 'Contact',
     'nav.about': 'À propos', 'nav.expertise': 'Expertise', 'nav.services': 'Services',
     'nav.work': 'Travaux', 'nav.contact': 'Contact',
     'hero.badge': 'Disponible pour de nouveaux projets', 'hero.hello': 'Je suis',
@@ -92,6 +96,8 @@ const I18N = {
     typing: ['Architecte Solutions IA', 'Ingénieur Industriel', 'Développeur Web & App']
   },
   ht: {
+    'bnav.home': 'Lakay', 'bnav.about': 'Konsènan', 'bnav.services': 'Sèvis',
+    'bnav.work': 'Travay', 'bnav.contact': 'Kontak',
     'nav.about': 'Konsènan', 'nav.expertise': 'Ekspètiz', 'nav.services': 'Sèvis',
     'nav.work': 'Travay', 'nav.contact': 'Kontak',
     'hero.badge': 'Disponib pou nouvo pwojè', 'hero.hello': 'Mwen se',
@@ -137,6 +143,8 @@ const I18N = {
     typing: ['Achitek Solisyon IA', 'Jenie Endistriyel', 'Devlopè Web & App']
   },
   es: {
+    'bnav.home': 'Inicio', 'bnav.about': 'Sobre mí', 'bnav.services': 'Servicios',
+    'bnav.work': 'Trabajos', 'bnav.contact': 'Contacto',
     'nav.about': 'Sobre mí', 'nav.expertise': 'Experiencia', 'nav.services': 'Servicios',
     'nav.work': 'Trabajos', 'nav.contact': 'Contacto',
     'hero.badge': 'Disponible para nuevos proyectos', 'hero.hello': 'Soy',

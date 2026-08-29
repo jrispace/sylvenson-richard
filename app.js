@@ -4,7 +4,25 @@
    ============================================================ */
 
 /* ---------- Language switching ---------- */
-let currentLang = localStorage.getItem('lang') || 'en';
+const SUPPORTED_LANGUAGES = ['en', 'fr', 'ht', 'es'];
+const DEFAULT_LANGUAGE = 'en';
+
+function detectBrowserLanguage() {
+  const candidates = [
+    ...(navigator.languages || []),
+    ...(navigator.language ? [navigator.language] : []),
+  ];
+  for (const candidate of candidates) {
+    const base = candidate.split('-')[0].toLowerCase();
+    if (SUPPORTED_LANGUAGES.includes(base)) return base;
+  }
+  return DEFAULT_LANGUAGE;
+}
+
+let currentLang = localStorage.getItem('lang');
+if (!currentLang || !SUPPORTED_LANGUAGES.includes(currentLang)) {
+  currentLang = detectBrowserLanguage();
+}
 
 function applyLang(lang) {
   const dict = I18N[lang];

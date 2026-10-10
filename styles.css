@@ -1078,6 +1078,14 @@ body.nav-locked { overflow: hidden; }
   gap: 10px;
 }
 .pf-icon { font-size: 1.6rem; line-height: 1; }
+.pf-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 11px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .42);
+}
 .pf-meta {
   font-size: .6rem;
   font-weight: 700;

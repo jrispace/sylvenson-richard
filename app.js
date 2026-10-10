@@ -113,7 +113,7 @@ window.addEventListener('resize', updateSpy);
 updateSpy();
 
 /* ---------- Reveal on scroll ---------- */
-const revealTargets = document.querySelectorAll('.section-head, .about-grid, .exp-card, .srv-card, .process-step, .contact-grid');
+const revealTargets = document.querySelectorAll('.section-head, .about-grid, .exp-card, .srv-card, .process-step, .contact-grid, .pf-card');
 revealTargets.forEach((el) => el.classList.add('reveal'));
 const io = new IntersectionObserver(
   (entries) => entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }),

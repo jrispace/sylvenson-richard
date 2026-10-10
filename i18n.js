@@ -49,7 +49,23 @@ const I18N = {
     'ct.success': 'Message sent! I\'ll get back to you shortly.',
     'ct.error': 'Error: ',
     'ft.rights': 'All rights reserved',
-    typing: ['AI Solutions Architect', 'Industrial Engineer', 'Web & App Developer']
+    
+    'nav.portfolio': 'Portfolio', 'bnav.portfolio': 'Projects', 'pf.tag': 'Portfolio',
+    'pf.title': 'Products I designed and built.',
+    'pf.sub': 'Live products, built end to end — from a desktop browser and a SaaS platform to AI agents and developer tools.',
+    'pf.visit': 'Visit', 'pf.p1t': 'Glowy', 'pf.p1m': 'Desktop app',
+    'pf.p1d': 'A browser for developers — multi-tab webview, integrated terminal, and chat side-sheets.',
+    'pf.p2t': 'Equip', 'pf.p2m': 'SaaS platform',
+    'pf.p2d': 'Project management platform for modern teams, with roles and invite-only onboarding.',
+    'pf.p3t': 'Shama', 'pf.p3m': 'macOS app',
+    'pf.p3d': 'A native macOS AI agent — local or cloud models, voice in and out, memory and scheduled jobs.',
+    'pf.p4t': 'MonAI', 'pf.p4m': 'AI product',
+    'pf.p4d': 'An AI assistant that lives inside your web pages and answers visitors in context.', 'pf.p5t': 'Resume',
+    'pf.p5m': 'Web app',
+    'pf.p5d': 'A letter template studio — customise every element of a professional letter with live preview.',
+    'pf.p6t': 'LocalProjectsManager', 'pf.p6m': 'Desktop app',
+    'pf.p6d': 'A 100% local project manager — your data never leaves your machine.',
+  typing: ['AI Solutions Architect', 'Industrial Engineer', 'Web & App Developer']
   },
   fr: {
     'bnav.home': 'Accueil', 'bnav.about': 'À propos', 'bnav.services': 'Services',
@@ -99,7 +115,23 @@ const I18N = {
     'ct.success': 'Message envoyé ! Je vous répondrai sous peu.',
     'ct.error': 'Erreur : ',
     'ft.rights': 'Tous droits réservés',
-    typing: ['Architecte Solutions IA', 'Ingénieur Industriel', 'Développeur Web & App']
+    
+    'nav.portfolio': 'Portfolio', 'bnav.portfolio': 'Projets', 'pf.tag': 'Portfolio',
+    'pf.title': 'Des produits que j\'ai conçus et développés.',
+    'pf.sub': 'Des produits en ligne, développés de A à Z — d\'un navigateur desktop et d\'une plateforme SaaS à des agents IA et des outils pour développeurs.',
+    'pf.visit': 'Voir', 'pf.p1t': 'Glowy', 'pf.p1m': 'Application desktop',
+    'pf.p1d': 'Un navigateur pour développeurs — webview multi-onglets, terminal intégré et panneaux latéraux de messagerie.',
+    'pf.p2t': 'Equip', 'pf.p2m': 'Plateforme SaaS',
+    'pf.p2d': 'Plateforme de gestion de projets pour équipes modernes, avec rôles et inscription sur invitation.',
+    'pf.p3t': 'Shama', 'pf.p3m': 'Application macOS',
+    'pf.p3d': 'Un agent IA natif pour macOS — modèles locaux ou cloud, voix, mémoire et tâches planifiées.',
+    'pf.p4t': 'MonAI', 'pf.p4m': 'Produit IA',
+    'pf.p4d': 'Un assistant IA intégré à vos pages web qui répond aux visiteurs selon le contexte.',
+    'pf.p5t': 'Resume', 'pf.p5m': 'Application web',
+    'pf.p5d': 'Un studio de modèles de lettres — personnalisez chaque élément avec aperçu en direct.',
+    'pf.p6t': 'LocalProjectsManager', 'pf.p6m': 'Application desktop',
+    'pf.p6d': 'Un gestionnaire de projets 100 % local — vos données ne quittent jamais votre machine.',
+  typing: ['Architecte Solutions IA', 'Ingénieur Industriel', 'Développeur Web & App']
   },
   ht: {
     'bnav.home': 'Lakay', 'bnav.about': 'Konsènan', 'bnav.services': 'Sèvis',
@@ -149,7 +181,22 @@ const I18N = {
     'ct.success': 'Mesaj voye! M ap reponn ou byento.',
     'ct.error': 'Erè: ',
     'ft.rights': 'Tout dwa rezève',
-    typing: ['Achitek Solisyon IA', 'Jenie Endistriyel', 'Devlopè Web & App']
+    
+    'nav.portfolio': 'Pòtfolyo', 'bnav.portfolio': 'Pwojè', 'pf.tag': 'Pòtfolyo',
+    'pf.title': 'Pwodwi mwen konsevwa epi bati.',
+    'pf.sub': 'Pwodwi ki an sèvis kounye a, bati depi nan kòmansman — soti nan yon navigatè desktop ak yon platfòm SaaS rive nan ajan IA ak zouti pou devlopè.',
+    'pf.visit': 'Gade', 'pf.p1t': 'Glowy', 'pf.p1m': 'Aplikasyon desktop',
+    'pf.p1d': 'Yon navigatè pou devlopè — webview plizyè onglè, tèminal entegre ak panno kote pou mesaj.',
+    'pf.p2t': 'Equip', 'pf.p2m': 'Platfòm SaaS',
+    'pf.p2d': 'Platfòm jesyon pwojè pou ekip modèn, ak wòl ak enskripsyon sou envitasyon.', 'pf.p3t': 'Shama',
+    'pf.p3m': 'Aplikasyon macOS',
+    'pf.p3d': 'Yon ajan IA natif pou macOS — modèl lokal oswa nyaj, vwa, memwa ak travay pwograme.',
+    'pf.p4t': 'MonAI', 'pf.p4m': 'Pwodwi IA',
+    'pf.p4d': 'Yon asistan IA ki rete nan paj wèb ou epi ki reponn vizitè yo dapre kontèks la.', 'pf.p5t': 'Resume',
+    'pf.p5m': 'Aplikasyon wèb', 'pf.p5d': 'Yon estidyo modèl lèt — pèsonalize chak eleman ak apèsi an dirèk.',
+    'pf.p6t': 'LocalProjectsManager', 'pf.p6m': 'Aplikasyon desktop',
+    'pf.p6d': 'Yon jesyonè pwojè 100% lokal — done w pa janm kite machin ou.',
+  typing: ['Achitek Solisyon IA', 'Jenie Endistriyel', 'Devlopè Web & App']
   },
   es: {
     'bnav.home': 'Inicio', 'bnav.about': 'Sobre mí', 'bnav.services': 'Servicios',
@@ -199,6 +246,22 @@ const I18N = {
     'ct.success': '¡Mensaje enviado! Te responderé pronto.',
     'ct.error': 'Error: ',
     'ft.rights': 'Todos los derechos reservados',
-    typing: ['Arquitecto de Soluciones IA', 'Ingeniero Industrial', 'Desarrollador Web & App']
+    
+    'nav.portfolio': 'Portafolio', 'bnav.portfolio': 'Proyectos', 'pf.tag': 'Portafolio',
+    'pf.title': 'Productos que diseñé y construí.',
+    'pf.sub': 'Productos en producción, creados de principio a fin — desde un navegador de escritorio y una plataforma SaaS hasta agentes de IA y herramientas para desarrolladores.',
+    'pf.visit': 'Ver', 'pf.p1t': 'Glowy', 'pf.p1m': 'App de escritorio',
+    'pf.p1d': 'Un navegador para desarrolladores — webview con pestañas, terminal integrada y paneles laterales de chat.',
+    'pf.p2t': 'Equip', 'pf.p2m': 'Plataforma SaaS',
+    'pf.p2d': 'Plataforma de gestión de proyectos para equipos modernos, con roles y registro por invitación.',
+    'pf.p3t': 'Shama', 'pf.p3m': 'App para macOS',
+    'pf.p3d': 'Un agente de IA nativo para macOS — modelos locales o en la nube, voz, memoria y tareas programadas.',
+    'pf.p4t': 'MonAI', 'pf.p4m': 'Producto de IA',
+    'pf.p4d': 'Un asistente de IA que vive dentro de tus páginas web y responde a los visitantes en contexto.',
+    'pf.p5t': 'Resume', 'pf.p5m': 'App web',
+    'pf.p5d': 'Un estudio de plantillas de cartas — personaliza cada elemento con vista previa en vivo.',
+    'pf.p6t': 'LocalProjectsManager', 'pf.p6m': 'App de escritorio',
+    'pf.p6d': 'Un gestor de proyectos 100 % local — tus datos nunca salen de tu equipo.',
+  typing: ['Arquitecto de Soluciones IA', 'Ingeniero Industrial', 'Desarrollador Web & App']
   }
 };

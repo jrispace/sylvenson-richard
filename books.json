@@ -1,7 +1,7 @@
 {
   "author": "Sylvenson Richard",
   "market": "www.amazon.com",
-  "synced_at": "2026-10-31T03:07:50Z",
+  "synced_at": "2026-10-31T03:12:46Z",
   "count": 1,
   "books": [
     {
@@ -14,7 +14,7 @@
       "published": "October 29, 2026",
       "price": "2.99",
       "currency": "$",
-      "rating": null,
+      "rating": "4.6",
       "publisher": null,
       "isbn": null,
       "url": "https://www.amazon.com/dp/B0HPMXF2F3",

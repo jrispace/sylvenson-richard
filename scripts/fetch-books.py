@@ -18,6 +18,7 @@ import re
 import shutil
 import subprocess
 import sys
+import time
 import urllib.parse
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -37,12 +38,18 @@ MARKETS = {
 }
 
 
-def get(url: str, lang: str = "en-US") -> str:
-    r = subprocess.run(
-        ["curl", "-s", "-m", "30", "-A", UA, "-H", f"Accept-Language: {lang},en;q=0.8",
-         "-H", "Accept: text/html,application/xhtml+xml", "-L", url],
-        capture_output=True, text=True, errors="ignore")
-    return r.stdout or ""
+def get(url: str, lang: str = "en-US", tries: int = 3, min_bytes: int = 20_000) -> str:
+    """Fetch a page, retrying when Amazon answers with a throttled stub (< 20 KB)."""
+    for attempt in range(tries):
+        r = subprocess.run(
+            ["curl", "-s", "-m", "30", "-A", UA, "-H", f"Accept-Language: {lang},en;q=0.8",
+             "-H", "Accept: text/html,application/xhtml+xml", "-L", url],
+            capture_output=True, text=True, errors="ignore")
+        body = r.stdout or ""
+        if len(body) >= min_bytes:
+            return body
+        time.sleep(1.5 * (attempt + 1))     # throttled (or a genuinely empty page)
+    return ""
 
 
 def plain(fragment: str) -> str:
@@ -56,8 +63,16 @@ def search_asins(author: str, host: str, lang: str) -> list[str]:
     """All ASINs whose byline carries the author's name, across result pages."""
     found: list[str] = []
     for page in range(1, 6):
-        q = urllib.parse.urlencode({"i": "digital-text", "field-author": author, "page": page})
-        src = get(f"https://{host}/s?{q}", lang)
+        # Amazon rotates between these two result shapes; try both before giving up on a page
+        queries = [
+            {"i": "digital-text", "field-author": author, "page": page},
+            {"k": author, "i": "digital-text", "page": page},
+        ]
+        src = ""
+        for q in queries:
+            src = get(f"https://{host}/s?" + urllib.parse.urlencode(q), lang)
+            if src:
+                break
         if not src:
             continue
         hits = [(m.start(), m.group(1)) for m in re.finditer(r'data-asin="(B0[A-Z0-9]{8})"', src)]
@@ -191,7 +206,13 @@ def main() -> int:
     asins = search_asins(args.author, host, lang)
     print(f"found  : {len(asins)} asin(s) → {', '.join(asins) or 'none'}")
     if not asins:
-        print("nothing to write; leaving books.json untouched", file=sys.stderr)
+        # Amazon can throttle a runner (or the author really has no listing yet).
+        # Keep the last good catalogue rather than deleting the section.
+        if OUT.exists():
+            print("warning: no results this run (Amazon throttled or no new titles) — "
+                  f"keeping the existing {OUT.name}", file=sys.stderr)
+            return 0
+        print("no titles found and no existing books.json", file=sys.stderr)
         return 1
 
     books = []

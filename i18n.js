@@ -65,6 +65,8 @@ const I18N = {
     'pf.p5d': 'A letter template studio — customise every element of a professional letter with live preview.',
     'pf.p6t': 'LocalProjectsManager', 'pf.p6m': 'Desktop app',
     'pf.p6d': 'A 100% local project manager — your data never leaves your machine.',
+    'pf.p7t': 'Code Studio', 'pf.p7m': 'Web app',
+    'pf.p7d': 'A QR & barcode studio that runs fully offline — 13 code types, custom design, PNG/SVG/PDF export, installable as an app.',
   typing: ['AI Solutions Architect', 'Industrial Engineer', 'Web & App Developer']
   },
   fr: {
@@ -131,6 +133,8 @@ const I18N = {
     'pf.p5d': 'Un studio de modèles de lettres — personnalisez chaque élément avec aperçu en direct.',
     'pf.p6t': 'LocalProjectsManager', 'pf.p6m': 'Application desktop',
     'pf.p6d': 'Un gestionnaire de projets 100 % local — vos données ne quittent jamais votre machine.',
+    'pf.p7t': 'Code Studio', 'pf.p7m': 'Application web',
+    'pf.p7d': 'Un studio de QR codes entièrement hors ligne — 13 types de codes, design personnalisé, export PNG/SVG/PDF, installable comme application.',
   typing: ['Architecte Solutions IA', 'Ingénieur Industriel', 'Développeur Web & App']
   },
   ht: {
@@ -196,6 +200,8 @@ const I18N = {
     'pf.p5m': 'Aplikasyon wèb', 'pf.p5d': 'Yon estidyo modèl lèt — pèsonalize chak eleman ak apèsi an dirèk.',
     'pf.p6t': 'LocalProjectsManager', 'pf.p6m': 'Aplikasyon desktop',
     'pf.p6d': 'Yon jesyonè pwojè 100% lokal — done w pa janm kite machin ou.',
+    'pf.p7t': 'Code Studio', 'pf.p7m': 'Aplikasyon wèb',
+    'pf.p7d': 'Yon estidyo kòd QR ki mache nèt oflayn — 13 tip kòd, design pèsonalize, ekspòtasyon PNG/SVG/PDF, enstale kòm aplikasyon.',
   typing: ['Achitek Solisyon IA', 'Jenie Endistriyel', 'Devlopè Web & App']
   },
   es: {
@@ -262,6 +268,8 @@ const I18N = {
     'pf.p5d': 'Un estudio de plantillas de cartas — personaliza cada elemento con vista previa en vivo.',
     'pf.p6t': 'LocalProjectsManager', 'pf.p6m': 'App de escritorio',
     'pf.p6d': 'Un gestor de proyectos 100 % local — tus datos nunca salen de tu equipo.',
+    'pf.p7t': 'Code Studio', 'pf.p7m': 'App web',
+    'pf.p7d': 'Un estudio de códigos QR totalmente sin conexión — 13 tipos de códigos, diseño personalizado, exportación PNG/SVG/PDF, instalable como app.',
   typing: ['Arquitecto de Soluciones IA', 'Ingeniero Industrial', 'Desarrollador Web & App']
   }
 };

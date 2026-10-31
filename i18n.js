@@ -67,6 +67,14 @@ const I18N = {
     'pf.p6d': 'A 100% local project manager — your data never leaves your machine.',
     'pf.p7t': 'Code Studio', 'pf.p7m': 'Web app',
     'pf.p7d': 'A QR & barcode studio that runs fully offline — 13 code types, custom design, PNG/SVG/PDF export, installable as an app.',
+    'nav.books': 'Books',
+    'bk.tag': 'Books', 'bk.title': 'What I write.',
+    'bk.sub': 'Studies and essays I publish outside of code — starting with a biblical look at money, chance and betting.',
+    'bk.b1m': 'Biblical study · French',
+    'bk.b1s': 'Money, chance and betting — reflection and discernment in the light of Scripture.',
+    'bk.b1d': 'A short, careful study of what the Bible actually says about money, lotteries, games of chance and gambling — without condemning anyone, and without pretending the subject is simple.',
+    'bk.m1': 'Kindle', 'bk.m2': '18 pages', 'bk.m3': 'French',
+    'bk.buy': 'Get it on Amazon',
   typing: ['AI Solutions Architect', 'Industrial Engineer', 'Web & App Developer']
   },
   fr: {
@@ -135,6 +143,14 @@ const I18N = {
     'pf.p6d': 'Un gestionnaire de projets 100 % local — vos données ne quittent jamais votre machine.',
     'pf.p7t': 'Code Studio', 'pf.p7m': 'Application web',
     'pf.p7d': 'Un studio de QR codes entièrement hors ligne — 13 types de codes, design personnalisé, export PNG/SVG/PDF, installable comme application.',
+    'nav.books': 'Livres',
+    'bk.tag': 'Livres', 'bk.title': 'Ce que j’écris.',
+    'bk.sub': 'Des études et des essais que je publie en dehors du code — en commençant par un regard biblique sur l’argent, le hasard et les paris.',
+    'bk.b1m': 'Étude biblique · Français',
+    'bk.b1s': 'L’argent, le hasard et les paris — réflexion et discernement à la lumière de l’Écriture.',
+    'bk.b1d': 'Une étude courte et rigoureuse de ce que la Bible dit réellement de l’argent, des loteries, des jeux de hasard et des paris — sans condamner personne, et sans prétendre que le sujet est simple.',
+    'bk.m1': 'Kindle', 'bk.m2': '18 pages', 'bk.m3': 'Français',
+    'bk.buy': 'Le trouver sur Amazon',
   typing: ['Architecte Solutions IA', 'Ingénieur Industriel', 'Développeur Web & App']
   },
   ht: {
@@ -202,6 +218,14 @@ const I18N = {
     'pf.p6d': 'Yon jesyonè pwojè 100% lokal — done w pa janm kite machin ou.',
     'pf.p7t': 'Code Studio', 'pf.p7m': 'Aplikasyon wèb',
     'pf.p7d': 'Yon estidyo kòd QR ki mache nèt oflayn — 13 tip kòd, design pèsonalize, ekspòtasyon PNG/SVG/PDF, enstale kòm aplikasyon.',
+    'nav.books': 'Liv',
+    'bk.tag': 'Liv', 'bk.title': 'Sa m ekri.',
+    'bk.sub': 'Etid ak redaksyon mwen pibliye deyò kòd — kòmanse ak yon gade biblik sou lajan, aza ak pari.',
+    'bk.b1m': 'Etid biblik · Franse',
+    'bk.b1s': 'Lajan, aza ak pari — refleksyon ak diskèsman nan limyè Ekriti a.',
+    'bk.b1d': 'Yon etid kout e serye sou sa Bib la di tout bon sou lajan, lotri, jwèt aza ak pari — san kondane pèsonn, e san pretann sijè a senp.',
+    'bk.m1': 'Kindle', 'bk.m2': '18 paj', 'bk.m3': 'Franse',
+    'bk.buy': 'Jwenn li sou Amazon',
   typing: ['Achitek Solisyon IA', 'Jenie Endistriyel', 'Devlopè Web & App']
   },
   es: {
@@ -270,6 +294,14 @@ const I18N = {
     'pf.p6d': 'Un gestor de proyectos 100 % local — tus datos nunca salen de tu equipo.',
     'pf.p7t': 'Code Studio', 'pf.p7m': 'App web',
     'pf.p7d': 'Un estudio de códigos QR totalmente sin conexión — 13 tipos de códigos, diseño personalizado, exportación PNG/SVG/PDF, instalable como app.',
+    'nav.books': 'Libros',
+    'bk.tag': 'Libros', 'bk.title': 'Lo que escribo.',
+    'bk.sub': 'Estudios y ensayos que publico fuera del código — empezando por una mirada bíblica al dinero, el azar y las apuestas.',
+    'bk.b1m': 'Estudio bíblico · Francés',
+    'bk.b1s': 'El dinero, el azar y las apuestas — reflexión y discernimiento a la luz de la Escritura.',
+    'bk.b1d': 'Un estudio breve y riguroso sobre lo que la Biblia dice realmente del dinero, las loterías, los juegos de azar y las apuestas — sin condenar a nadie y sin fingir que el tema es simple.',
+    'bk.m1': 'Kindle', 'bk.m2': '18 páginas', 'bk.m3': 'Francés',
+    'bk.buy': 'Conseguirlo en Amazon',
   typing: ['Arquitecto de Soluciones IA', 'Ingeniero Industrial', 'Desarrollador Web & App']
   }
 };

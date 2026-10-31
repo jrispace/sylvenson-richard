@@ -1,0 +1,25 @@
+{
+  "author": "Sylvenson Richard",
+  "market": "www.amazon.com",
+  "synced_at": "2026-10-31T03:07:27Z",
+  "count": 1,
+  "books": [
+    {
+      "asin": "B0HPMXF2F3",
+      "title": "L'argent, le hasard et les paris (French Edition)",
+      "author": "Sylvenson Richard",
+      "description": "Découvrez une réflexion captivante de treize pages qui explore avec profondeur les principes et sagesses intemporelles concernant l'argent, les pièges du hasard et les motivations humaines face aux jeux.",
+      "pages": "18",
+      "language": "French",
+      "published": "October 29, 2026",
+      "price": "2.99",
+      "currency": "$",
+      "rating": null,
+      "publisher": null,
+      "isbn": null,
+      "url": "https://www.amazon.com/dp/B0HPMXF2F3",
+      "cover_url": "https://m.media-amazon.com/images/I/81iqC+C7waL._SL1500_.jpg",
+      "cover": "books/B0HPMXF2F3.jpg"
+    }
+  ]
+}

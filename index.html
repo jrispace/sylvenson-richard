@@ -37,6 +37,7 @@
       <li><a href="#work" data-i18n="nav.work">Work</a></li>
       <li><a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a></li>
       <li><a href="#books" data-i18n="nav.books">Books</a></li>
+      <li><a href="#songs" data-i18n="nav.songs">Songs</a></li>
       <li><a href="#contact" class="nav-cta" data-i18n="nav.contact">Contact</a></li>
       <li class="drawer-foot">
         <div class="lang-switcher lang-switcher-mobile">
@@ -388,7 +389,7 @@
       <h2 class="section-title" data-i18n="bk.title">What I write.</h2>
       <p class="pf-intro" data-i18n="bk.sub">Studies and essays I publish outside of code — starting with a biblical look at money, chance and betting.</p>
     </div>
-    <div class="books-grid">
+    <div class="books-grid" id="booksGrid" data-synced="0">
       <article class="book-card">
         <a class="book-cover" href="https://www.amazon.com/dp/B0HPMXF2F3" target="_blank" rel="noopener noreferrer" aria-label="L'argent, le hasard et les paris — Amazon">
           <img src="books/argent-hasard-paris.jpg" alt="Cover of L'argent, le hasard et les paris by Sylvenson Richard" width="625" height="1000" loading="lazy">
@@ -409,6 +410,20 @@
           </a>
         </div>
       </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SONGS ===== -->
+<section class="section" id="songs">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag" data-i18n="sg.tag">Songs</span>
+      <h2 class="section-title" data-i18n="sg.title">What I sing.</h2>
+      <p class="pf-intro" data-i18n="sg.sub">Gospel releases under Richaerly and Sylvenson Richard — tap a cover to hear a preview.</p>
+    </div>
+    <div class="songs-grid" id="songsGrid" data-synced="0">
+      <p class="songs-empty" data-i18n="sg.loading">Loading the catalogue…</p>
     </div>
   </div>
 </section>

@@ -75,6 +75,13 @@ const I18N = {
     'bk.b1d': 'A short, careful study of what the Bible actually says about money, lotteries, games of chance and gambling — without condemning anyone, and without pretending the subject is simple.',
     'bk.m1': 'Kindle', 'bk.m2': '18 pages', 'bk.m3': 'French',
     'bk.buy': 'Get it on Amazon',
+    'nav.songs': 'Songs',
+    'sg.tag': 'Songs', 'sg.title': 'What I sing.',
+    'sg.sub': 'Gospel releases under Richaerly and Sylvenson Richard — tap a cover to hear a preview.',
+    'sg.loading': 'Loading the catalogue…',
+    'sg.listen': 'Play a preview', 'sg.pause': 'Pause preview',
+    'sg.open': 'Apple Music', 'bk.pages': '{n} pages', 'bk.kindle': 'Kindle',
+    'bk.synced': 'Synced automatically from Amazon',
   typing: ['AI Solutions Architect', 'Industrial Engineer', 'Web & App Developer']
   },
   fr: {
@@ -151,6 +158,13 @@ const I18N = {
     'bk.b1d': 'Une étude courte et rigoureuse de ce que la Bible dit réellement de l’argent, des loteries, des jeux de hasard et des paris — sans condamner personne, et sans prétendre que le sujet est simple.',
     'bk.m1': 'Kindle', 'bk.m2': '18 pages', 'bk.m3': 'Français',
     'bk.buy': 'Le trouver sur Amazon',
+    'nav.songs': 'Chansons',
+    'sg.tag': 'Chansons', 'sg.title': 'Ce que je chante.',
+    'sg.sub': 'Des sorties gospel sous Richaerly et Sylvenson Richard — touchez une pochette pour écouter un extrait.',
+    'sg.loading': 'Chargement du catalogue…',
+    'sg.listen': 'Écouter un extrait', 'sg.pause': 'Mettre en pause',
+    'sg.open': 'Apple Music', 'bk.pages': '{n} pages', 'bk.kindle': 'Kindle',
+    'bk.synced': 'Synchronisé automatiquement depuis Amazon',
   typing: ['Architecte Solutions IA', 'Ingénieur Industriel', 'Développeur Web & App']
   },
   ht: {
@@ -226,6 +240,13 @@ const I18N = {
     'bk.b1d': 'Yon etid kout e serye sou sa Bib la di tout bon sou lajan, lotri, jwèt aza ak pari — san kondane pèsonn, e san pretann sijè a senp.',
     'bk.m1': 'Kindle', 'bk.m2': '18 paj', 'bk.m3': 'Franse',
     'bk.buy': 'Jwenn li sou Amazon',
+    'nav.songs': 'Chante',
+    'sg.tag': 'Chante', 'sg.title': 'Sa m chante.',
+    'sg.sub': 'Mizik levanjil sou non Richaerly ak Sylvenson Richard — peze yon pòtrè pou koute yon ekstrè.',
+    'sg.loading': 'N ap chaje katalòg la…',
+    'sg.listen': 'Koute yon ekstrè', 'sg.pause': 'Fè yon poz',
+    'sg.open': 'Apple Music', 'bk.pages': '{n} paj', 'bk.kindle': 'Kindle',
+    'bk.synced': 'Senkronize otomatikman ak Amazon',
   typing: ['Achitek Solisyon IA', 'Jenie Endistriyel', 'Devlopè Web & App']
   },
   es: {
@@ -302,6 +323,13 @@ const I18N = {
     'bk.b1d': 'Un estudio breve y riguroso sobre lo que la Biblia dice realmente del dinero, las loterías, los juegos de azar y las apuestas — sin condenar a nadie y sin fingir que el tema es simple.',
     'bk.m1': 'Kindle', 'bk.m2': '18 páginas', 'bk.m3': 'Francés',
     'bk.buy': 'Conseguirlo en Amazon',
+    'nav.songs': 'Canciones',
+    'sg.tag': 'Canciones', 'sg.title': 'Lo que canto.',
+    'sg.sub': 'Lanzamientos gospel bajo Richaerly y Sylvenson Richard — toca una portada para escuchar un avance.',
+    'sg.loading': 'Cargando el catálogo…',
+    'sg.listen': 'Escuchar un avance', 'sg.pause': 'Pausar',
+    'sg.open': 'Apple Music', 'bk.pages': '{n} páginas', 'bk.kindle': 'Kindle',
+    'bk.synced': 'Sincronizado automáticamente desde Amazon',
   typing: ['Arquitecto de Soluciones IA', 'Ingeniero Industrial', 'Desarrollador Web & App']
   }
 };

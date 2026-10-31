@@ -1,0 +1,120 @@
+{
+  "artists": [
+    "1450464033",
+    "1332065881",
+    "1737295384",
+    "1332065888"
+  ],
+  "synced_at": "2026-10-31T03:07:28Z",
+  "count": 9,
+  "songs": [
+    {
+      "id": "1782416155",
+      "title": "Osita de Mi Vida",
+      "album": "Osita de Mi Vida - Single",
+      "artist": "Sylvenson Richard",
+      "genre": "R&B/Soul",
+      "released": "2024-11-13",
+      "duration_ms": 174367,
+      "art": "songs/1782416155.jpg",
+      "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a9/df/bb/a9dfbb9b-392c-af54-cd4a-5551399a51a3/mzaf_16897879202261583539.plus.aac.p.m4a",
+      "url": "https://music.apple.com/us/album/osita-de-mi-vida/1782416153?i=1782416155&uo=4"
+    },
+    {
+      "id": "1756511192",
+      "title": "Tu Gloria",
+      "album": "Tu Gloria - Single",
+      "artist": "Sylvenson Richard",
+      "genre": "Gospel",
+      "released": "2024-07-02",
+      "duration_ms": 337778,
+      "art": "songs/1756511192.jpg",
+      "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b2/56/9d/b2569dcf-a57b-a099-15d7-ec373daba7d9/mzaf_11697254212286296946.plus.aac.p.m4a",
+      "url": "https://music.apple.com/us/album/tu-gloria/1756511191?i=1756511192&uo=4"
+    },
+    {
+      "id": "1737296358",
+      "title": "Miracle Working God",
+      "album": "Miracle Working God - Single",
+      "artist": "Sylvenson Richard",
+      "genre": "Praise & Worship",
+      "released": "2024-03-20",
+      "duration_ms": 405657,
+      "art": "songs/1737296358.jpg",
+      "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b5/91/f5/b591f591-38b6-bc7d-541a-f01cd80ecfe7/mzaf_7038528570543395783.plus.aac.p.m4a",
+      "url": "https://music.apple.com/us/album/miracle-working-god/1737296357?i=1737296358&uo=4"
+    },
+    {
+      "id": "1736035015",
+      "title": "Above All Names (feat. Darrel 'MusiqCity' Walls) [Kompa Version]",
+      "album": "Above All Names (feat. Darrel 'MusiqCity' Walls) [Kompa Version] - Single",
+      "artist": "Richaerly",
+      "genre": "Christian",
+      "released": "2024-02-27",
+      "duration_ms": 417882,
+      "art": "songs/1736035015.jpg",
+      "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/55/ce/e6/55cee679-f798-e007-44e8-244b2aed7fdd/mzaf_4184910079837785667.plus.aac.p.m4a",
+      "url": "https://music.apple.com/us/album/above-all-names-feat-darrel-musiqcity-walls-kompa-version/1736035013?i=1736035015&uo=4"
+    },
+    {
+      "id": "1733175635",
+      "title": "Come On",
+      "album": "Come On - Single",
+      "artist": "Sylvenson Richard",
+      "genre": "Christian",
+      "released": "2024-02-03",
+      "duration_ms": 195429,
+      "art": "songs/1733175635.jpg",
+      "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/43/c1/b7/43c1b72c-febe-e609-b77b-6620f17801c3/mzaf_14707551001361714842.plus.aac.p.m4a",
+      "url": "https://music.apple.com/us/album/come-on/1733175634?i=1733175635&uo=4"
+    },
+    {
+      "id": "1632218604",
+      "title": "Ou Se (feat. Abigaelle Richard)",
+      "album": "Ou Se (feat. Abigaelle Richard) - Single",
+      "artist": "Richaerly & Sylvenson Richard (Richaerly)",
+      "genre": "Alternative",
+      "released": "2022-06-16",
+      "duration_ms": 239148,
+      "art": "songs/1632218604.jpg",
+      "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/37/7d/0b/377d0bd1-57fe-ade2-8cc7-49e5c11851c9/mzaf_13563764804069994349.plus.aac.p.m4a",
+      "url": "https://music.apple.com/us/album/ou-se-feat-abigaelle-richard/1632218602?i=1632218604&uo=4"
+    },
+    {
+      "id": "1547895986",
+      "title": "Que Ton Règne Vienne",
+      "album": "Que Ton Règne Vienne - Single",
+      "artist": "Richaerly",
+      "genre": "Christian",
+      "released": "2020-12-13",
+      "duration_ms": 202137,
+      "art": "songs/1547895986.jpg",
+      "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview124/v4/96/cf/59/96cf5994-3757-3f77-cc2c-61cc3b2be1b4/mzaf_4824712227369639915.plus.aac.p.m4a",
+      "url": "https://music.apple.com/us/album/que-ton-r%C3%A8gne-vienne/1547895977?i=1547895986&uo=4"
+    },
+    {
+      "id": "1477897280",
+      "title": "Inside (feat. Gft Jean)",
+      "album": "Inside (feat. Gft Jean) - Single",
+      "artist": "Richaerly",
+      "genre": "Praise & Worship",
+      "released": "2019-08-08",
+      "duration_ms": 239387,
+      "art": "songs/1477897280.jpg",
+      "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/c5/55/21/c555217c-fd44-a162-0577-d06eeb37d67e/mzaf_11209237481387102220.plus.aac.p.m4a",
+      "url": "https://music.apple.com/us/album/inside-feat-gft-jean/1477897279?i=1477897280&uo=4"
+    },
+    {
+      "id": "1332065887",
+      "title": "Vivate la Vida",
+      "album": "Vivate la Vida - Single",
+      "artist": "Sylvenson Richard (Richaerly) & Kerencia Borgelin",
+      "genre": "Gospel",
+      "released": "2017-01-10",
+      "duration_ms": 272275,
+      "art": "songs/1332065887.jpg",
+      "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview128/v4/bd/fb/2c/bdfb2c8b-7199-9a94-93f6-f07fc05b104e/mzaf_5176359182474905690.plus.aac.p.m4a",
+      "url": "https://music.apple.com/us/album/vivate-la-vida/1332065880?i=1332065887&uo=4"
+    }
+  ]
+}

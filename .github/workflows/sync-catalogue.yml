@@ -1,0 +1,52 @@
+name: Sync catalogue
+
+# Rebuilds books.json / songs.json (and their artwork) from the live sources:
+#   books → Amazon Kindle store, filtered by author name
+#   songs → Apple Music public API, by artist ID
+# Commits only when something actually changed.
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"        # every Monday, 06:00 UTC
+  workflow_dispatch:           # or run it by hand from the Actions tab
+  push:
+    paths:
+      - "scripts/fetch-books.py"
+      - "scripts/fetch-songs.py"
+      - ".github/workflows/sync-catalogue.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install image tooling
+        run: python -m pip install --quiet --disable-pip-version-check pillow
+
+      - name: Sync books
+        run: python scripts/fetch-books.py
+        continue-on-error: true     # Amazon can rate-limit; never fail the whole job
+
+      - name: Sync songs
+        run: python scripts/fetch-songs.py
+        continue-on-error: true
+
+      - name: Commit changes
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add books.json songs.json books songs
+          if git diff --staged --quiet; then
+            echo "catalogue already up to date"
+          else
+            git commit -m "chore(catalogue): auto-sync books and songs"
+            git push
+          fi

@@ -1,8 +1,8 @@
 {
   "author": "Sylvenson Richard",
   "market": "www.amazon.com",
-  "synced_at": "2026-11-02T14:26:25Z",
-  "count": 1,
+  "synced_at": "2026-11-17T19:34:25Z",
+  "count": 2,
   "books": [
     {
       "asin": "B0HPMXF2F3",
@@ -12,14 +12,31 @@
       "pages": "18",
       "language": "French",
       "published": "October 29, 2026",
-      "price": "2.99",
+      "price": "0.00",
       "currency": "$",
-      "rating": null,
+      "rating": "5.0",
       "publisher": null,
       "isbn": null,
       "url": "https://www.amazon.com/dp/B0HPMXF2F3",
       "cover_url": "https://m.media-amazon.com/images/I/81iqC+C7waL._SL1500_.jpg",
       "cover": "books/B0HPMXF2F3.jpg"
+    },
+    {
+      "asin": "B0HRX7L7N1",
+      "title": "Ce qu'on t'a pas dit sur le désert: Le mistere du désert spirituel (La foi dans le désert t. 1) (French Edition)",
+      "author": "Sylvenson Richard",
+      "description": "Cela fait des mois que tu pries pour que ta situation change. Tu as fait ce que tu pouvais, et la réponse tarde encore. Comment continuer à faire confiance à Dieu quand tu ne sais pas de quoi demain sera fait ? Dans Ce qu’on t’a pas dit sur le désert , Sylvenson Richard raconte comment une séparation imprévue dans son couple l’a amené à revoir sa manière de prier, de parler et de prendre des décisions. À travers son témoignage et des récits bibliques, du départ d’Abraham aux tentations de Jésus, il explore ce qui peut grandir en toi au cœur de l’épreuve. Au fil des pages, tu trouveras des pist",
+      "pages": "40",
+      "language": "French",
+      "published": "November 16, 2026",
+      "price": "2.99",
+      "currency": "$",
+      "rating": null,
+      "publisher": null,
+      "isbn": null,
+      "url": "https://www.amazon.com/dp/B0HRX7L7N1",
+      "cover_url": "https://m.media-amazon.com/images/I/81hS4T6Z+zL._SL1500_.jpg",
+      "cover": "books/B0HRX7L7N1.jpg"
     }
   ]
 }

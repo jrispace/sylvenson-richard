@@ -42,7 +42,7 @@ def get(url: str, lang: str = "en-US", tries: int = 3, min_bytes: int = 20_000) 
     """Fetch a page, retrying when Amazon answers with a throttled stub (< 20 KB)."""
     for attempt in range(tries):
         r = subprocess.run(
-            ["curl", "-s", "-m", "30", "-A", UA, "-H", f"Accept-Language: {lang},en;q=0.8",
+            ["curl", "-s", "--compressed", "-m", "30", "-A", UA, "-H", f"Accept-Language: {lang},en;q=0.8",
              "-H", "Accept: text/html,application/xhtml+xml", "-L", url],
             capture_output=True, text=True, errors="ignore")
         body = r.stdout or ""
@@ -184,7 +184,7 @@ def save_cover(book: dict) -> str | None:
     BOOKS_DIR.mkdir(exist_ok=True)
     dest = BOOKS_DIR / f"{book['asin']}.jpg"
     tmp = BOOKS_DIR / f"{book['asin']}.raw"
-    r = subprocess.run(["curl", "-s", "-m", "45", "-A", UA, book["cover_url"], "-o", str(tmp)],
+    r = subprocess.run(["curl", "-s", "--compressed", "-m", "45", "-A", UA, book["cover_url"], "-o", str(tmp)],
                        capture_output=True, text=True)
     if not tmp.exists() or tmp.stat().st_size < 5000:
         tmp.unlink(missing_ok=True)

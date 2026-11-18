@@ -369,3 +369,215 @@ document.addEventListener('langchange', () => {
 });
 
 loadCatalogue();
+
+/* ============================================================
+   WhatsApp screening chat — pre-qualify before the thread opens
+   Mirrored from Code Studio. JRiSpace | Sylvenson Richard
+   ============================================================ */
+(function () {
+  'use strict';
+  var WA = 'https://wa.me/50938248175';
+  var STEPS = [
+    { key: 'name',     ask: 'chat.q1', type: 'text',   required: true },
+    { key: 'email',    ask: 'chat.q2', type: 'email',  required: true, withName: true },
+    { key: 'business', ask: 'chat.q3', type: 'text',   required: false },
+    { key: 'sector',   ask: 'chat.q4', type: 'choice', options: 's' },
+    { key: 'need',     ask: 'chat.q5', type: 'choice', options: 'n' }
+  ];
+
+  var transcript = [], step = 0, answers = {}, busy = false, finished = false;
+  var overlay = document.getElementById('chatOverlay');
+  if (!overlay) return; // chat markup not present — nothing to wire
+  var body = document.getElementById('chatBody'),
+      input = document.getElementById('chatText'),
+      chips = document.getElementById('chatChips'),
+      stepLabel = document.getElementById('chatStep'),
+      bar = document.getElementById('chatBar');
+
+  function $(id) { return document.getElementById(id); }
+  function T(key, vars) { return tr(key, vars); }
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c];
+    });
+  }
+
+  function bubble(role, text) {
+    var d = document.createElement('div');
+    d.className = 'msg ' + role;
+    d.innerHTML = esc(text).replace(/\n/g, '<br>');
+    body.appendChild(d);
+    body.scrollTop = body.scrollHeight;
+    return d;
+  }
+  function typing() {
+    var d = document.createElement('div');
+    d.className = 'typing';
+    d.innerHTML = '<i></i><i></i><i></i>';
+    body.appendChild(d);
+    body.scrollTop = body.scrollHeight;
+    return d;
+  }
+  function push(entry) {
+    transcript.push(entry);
+    bubble(entry.role, entry.text);
+  }
+  function progress() {
+    var done = Math.min(step, STEPS.length);
+    stepLabel.textContent = T('chat.step', { n: Math.min(step + 1, STEPS.length), total: STEPS.length });
+    bar.style.width = Math.round(done / STEPS.length * 100) + '%';
+  }
+  function askNext() {
+    if (step >= STEPS.length) return finish();
+    var s = STEPS[step];
+    var vars = s.withName ? { name: (answers.name || '').split(' ')[0] || answers.name || '' } : null;
+    var text = T(s.ask, vars);
+    busy = true;
+    var t = typing();
+    setTimeout(function () {
+      t.remove();
+      push({ role: 'bot', key: s.ask, vars: vars, text: text });
+      busy = false;
+      renderChips(s);
+      progress();
+      requestAnimationFrame(function () { body.scrollTop = body.scrollHeight; });
+      input.focus();
+    }, 420);
+  }
+  function renderChips(s) {
+    chips.textContent = '';
+    if (!s || s.type !== 'choice') return;
+    for (var i = 1; i <= 8; i++) {
+      var k = 'chat.' + s.options + i, v = T(k);
+      if (v === k) break;
+      (function (label) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'chip';
+        b.textContent = label;
+        b.addEventListener('click', function () { answer(label); });
+        chips.appendChild(b);
+      })(v);
+    }
+  }
+  function composeMessage() {
+    var a = answers, L = [];
+    L.push("Hi! I'm coming from Sylvenson Richard's portfolio.");
+    L.push('');
+    L.push('Name: ' + (a.name || '—'));
+    L.push('Email: ' + (a.email || '—'));
+    L.push('Business: ' + (a.business || '—'));
+    L.push('Sector: ' + (a.sector || '—'));
+    L.push('Need: ' + (a.need || '—'));
+    return L.join('\n');
+  }
+  function finish() {
+    finished = true;
+    var text = composeMessage();
+    var box = document.createElement('div');
+    box.className = 'msg bot';
+    box.style.maxWidth = '96%';
+    var head = document.createElement('div');
+    head.style.marginBottom = '8px';
+    head.textContent = T('chat.summary');
+    var pre = document.createElement('div');
+    pre.className = 'chat-summary';
+    pre.textContent = text;
+    var actions = document.createElement('div');
+    actions.className = 'chat-actions';
+    var open = document.createElement('a');
+    open.className = 'chat-btn go';
+    open.id = 'chatOpen';
+    open.href = WA + '?text=' + encodeURIComponent(text);
+    open.target = '_blank';
+    open.rel = 'noopener noreferrer';
+    open.textContent = T('chat.open');
+    open.addEventListener('click', function () { setTimeout(close, 400); });
+    var again = document.createElement('button');
+    again.type = 'button';
+    again.className = 'chat-btn';
+    again.id = 'chatAgain';
+    again.textContent = T('chat.restart');
+    again.addEventListener('click', function () { reset(); });
+    actions.appendChild(open);
+    actions.appendChild(again);
+    box.appendChild(head);
+    box.appendChild(pre);
+    box.appendChild(actions);
+    body.appendChild(box);
+    body.scrollTop = body.scrollHeight;
+    chips.textContent = '';
+    input.disabled = true;
+    stepLabel.textContent = T('chat.step', { n: STEPS.length, total: STEPS.length });
+    bar.style.width = '100%';
+  }
+  function answer(value) {
+    if (busy || finished) return;
+    var s = STEPS[step];
+    if (!s) return;
+    var v = String(value == null ? '' : value)
+      .replace(/[\u0000-\u001f\u007f]/g, ' ')
+      .trim()
+      .slice(0, 300);
+    if (s.type === 'email' && v && !/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(v)) {
+      push({ role: 'user', text: v });
+      push({ role: 'bot', text: T('chat.badEmail') });
+      input.value = '';
+      return;
+    }
+    if (s.required && !v) return;
+    answers[s.key] = v || '—';
+    input.value = '';
+    push({ role: 'user', text: v || T('chat.skip') });
+    step++;
+    askNext();
+  }
+  function reset() {
+    transcript = []; answers = {}; step = 0; busy = false; finished = false;
+    body.textContent = ''; chips.textContent = '';
+    input.disabled = false; input.value = '';
+    push({ role: 'bot', key: 'chat.intro', text: T('chat.intro') });
+    progress();
+    askNext();
+  }
+  function openChat() {
+    overlay.hidden = false;
+    document.body.style.overflow = 'hidden';
+    reset();
+    setTimeout(function () { input.focus(); }, 60);
+  }
+  function close() {
+    overlay.hidden = true;
+    document.body.style.overflow = '';
+  }
+
+  // Wire openers: floating button, promo CTA, and the four service cards
+  var floatBtn = $('waFloat');
+  if (floatBtn) floatBtn.addEventListener('click', openChat);
+  var promoBtn = $('promoWaBtn');
+  if (promoBtn) promoBtn.addEventListener('click', openChat);
+  document.querySelectorAll('.svc a').forEach(function (el) {
+    el.addEventListener('click', function (e) { e.preventDefault(); openChat(); });
+  });
+
+  $('chatForm').addEventListener('submit', function (e) { e.preventDefault(); if (!busy && !finished) answer(input.value); });
+  $('chatClose').addEventListener('click', close);
+  overlay.addEventListener('click', function (e) { if (e.target === overlay) close(); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !overlay.hidden) close();
+  });
+
+  // Keep the chat chrome translated; re-render non-final transcript on language switch
+  document.addEventListener('langchange', function () {
+    $('chatStatus').textContent = T('chat.status');
+    $('chatTitle').textContent = T('chat.head');
+    input.placeholder = T('chat.ph');
+    $('waLabel').textContent = T('wa.label');
+    if (overlay.hidden || finished) return;
+    body.textContent = '';
+    transcript.forEach(function (m) { bubble(m.role, m.key ? T(m.key, m.vars) : m.text); });
+    var s = STEPS[Math.min(step, STEPS.length - 1)];
+    renderChips(step < STEPS.length ? s : null);
+    progress();
+  });
+})();

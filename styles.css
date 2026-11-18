@@ -1377,3 +1377,157 @@ body.nav-locked { overflow: hidden; }
   .song-play svg { width: 15px; height: 15px; }
   .song-title { font-size: .86rem; }
 }
+
+/* ============================================================
+   WORK WITH US — promo card + WhatsApp screening chat
+   JRiSpace | Sylvenson Richard (mirrored from Code Studio)
+   ============================================================ */
+
+/* ---- Promo / inverse-psychology service card ---- */
+.promo{
+  margin:34px 0 8px;padding:30px;border-radius:22px;color:#fff;position:relative;overflow:hidden;
+  background:
+    radial-gradient(600px 300px at 85% -10%, rgba(192,24,47,.45), transparent 60%),
+    radial-gradient(500px 320px at 5% 110%, rgba(10,59,181,.55), transparent 62%),
+    linear-gradient(140deg,#061024,#0b1a3a 55%,#101b3d);
+  box-shadow:0 24px 60px rgba(6,16,36,.28);
+  border:1px solid rgba(255,255,255,.08);
+}
+.promo *{color:inherit}
+.promo .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:10.5px;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;color:rgba(255,255,255,.62)}
+.promo .eyebrow::before{content:"";width:16px;height:1px;background:rgba(255,255,255,.4)}
+.promo h2{margin:12px 0 10px;font-size:clamp(22px,2.9vw,32px);line-height:1.12;letter-spacing:-.028em;font-weight:800;max-width:22ch}
+.promo h2 em{font-style:normal;background:linear-gradient(100deg,#ff8fa3,#ffd0a8);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.promo .lede{margin:0;color:rgba(255,255,255,.72);font-size:14px;max-width:60ch}
+.promo-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:18px;margin-top:24px;align-items:start}
+.pain{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:18px 18px 14px}
+.pain h3{margin:0 0 12px;font-size:13px;letter-spacing:.02em;font-weight:700;color:#fff}
+.pain ul{margin:0;padding:0;list-style:none;display:grid;gap:9px}
+.pain li{position:relative;padding-left:26px;font-size:13px;line-height:1.5;color:rgba(255,255,255,.82)}
+.pain li::before{content:"✕";position:absolute;left:0;top:2px;width:17px;height:17px;border-radius:50%;
+  background:rgba(255,92,114,.18);color:#ff8fa3;font-size:9px;font-weight:800;display:grid;place-items:center}
+.leak{margin:14px 0 0;padding-top:12px;border-top:1px dashed rgba(255,255,255,.16);
+  font-size:12.5px;font-style:italic;color:rgba(255,255,255,.62)}
+.svc{display:grid;gap:10px}
+.svc a{display:flex;gap:12px;align-items:flex-start;padding:13px 15px;border-radius:14px;text-decoration:none;
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);
+  transition:transform .16s ease, background .16s ease, border-color .16s ease}
+.svc a:hover{transform:translateX(3px);background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2)}
+.svc .ico{width:32px;height:32px;border-radius:10px;flex:0 0 auto;display:grid;place-items:center;
+  background:linear-gradient(140deg,rgba(255,143,163,.42),rgba(96,146,255,.42));
+  border:1px solid rgba(255,255,255,.24);box-shadow:inset 0 1px 0 rgba(255,255,255,.25)}
+.svc .ico svg{width:15px;height:15px;stroke:#fff}
+.svc b{display:block;font-size:13px;font-weight:700;color:#fff}
+.svc span.desc{display:block;font-size:12px;color:rgba(255,255,255,.66);margin-top:2px;line-height:1.45}
+.promo-cta{margin-top:22px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center;
+  padding:18px 20px;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
+.promo-cta h3{margin:0 0 4px;font-size:15px;font-weight:800;letter-spacing:-.01em;color:#fff}
+.promo-cta p{margin:0;font-size:12.5px;color:rgba(255,255,255,.68);max-width:52ch}
+.wa-cta{display:inline-flex;align-items:center;gap:12px;padding:15px 22px;border-radius:14px;text-decoration:none;
+  background:linear-gradient(135deg,#25d366,#12b355);color:#04240f;font-weight:800;font-size:13.5px;
+  box-shadow:0 12px 28px rgba(37,211,102,.32);transition:transform .16s ease, box-shadow .16s ease;white-space:nowrap;cursor:pointer;border:0}
+.wa-cta:hover{transform:translateY(-2px);box-shadow:0 18px 36px rgba(37,211,102,.42);color:#04240f}
+.wa-cta svg{width:19px;height:19px;stroke:#04240f;fill:none}
+.wa-cta small{display:block;font-size:10.5px;font-weight:600;opacity:.72;letter-spacing:.02em}
+.promo-note{margin:14px 0 0;font-size:11.5px;color:rgba(255,255,255,.5);text-align:center}
+@media(max-width:900px){
+  .promo{padding:22px;border-radius:18px}
+  .promo-grid{grid-template-columns:1fr}
+  .promo-cta{grid-template-columns:1fr}
+  .wa-cta{justify-content:center}
+}
+
+/* ---- Floating WhatsApp button ---- */
+.wa-float{
+  position:fixed;bottom:88px;right:20px;z-index:150;
+  width:58px;height:58px;border-radius:50%;border:0;cursor:pointer;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;
+  box-shadow:0 10px 30px rgba(37,211,102,.45), 0 0 0 0 rgba(37,211,102,.55);
+  animation:wa-pulse 2.5s infinite;
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+.wa-float:hover{transform:translateY(-4px) scale(1.08);box-shadow:0 16px 38px rgba(37,211,102,.55)}
+.wa-float:active{transform:scale(.96)}
+@keyframes wa-pulse{
+  0%{box-shadow:0 10px 30px rgba(37,211,102,.45), 0 0 0 0 rgba(37,211,102,.55)}
+  70%{box-shadow:0 10px 30px rgba(37,211,102,.45), 0 0 0 18px rgba(37,211,102,0)}
+  100%{box-shadow:0 10px 30px rgba(37,211,102,.45), 0 0 0 0 rgba(37,211,102,0)}
+}
+.wa-label{
+  position:fixed;bottom:96px;right:88px;z-index:150;
+  background:rgba(11,16,32,.95);color:#e9edef;border:1px solid rgba(255,255,255,.12);
+  padding:9px 14px;border-radius:999px;font-size:12px;font-weight:600;white-space:nowrap;
+  opacity:0;visibility:hidden;pointer-events:none;transform:translateX(8px);
+  transition:opacity .2s ease, transform .2s ease, visibility .2s;
+}
+.wa-float-wrap:hover .wa-label{opacity:1;visibility:visible;transform:translateX(0)}
+@media(min-width:721px){ .wa-float{bottom:26px;right:26px} .wa-label{bottom:34px;right:94px} }
+
+/* ---- WhatsApp screening chat overlay ---- */
+.chat-overlay{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:18px;
+  background:rgba(6,12,26,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.chat-overlay[hidden]{display:none}
+.chat{width:min(430px,100%);max-height:min(660px,92vh);display:flex;flex-direction:column;overflow:hidden;
+  border-radius:20px;background:#0b141a;box-shadow:0 30px 80px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.08);
+  animation:chatIn .22s cubic-bezier(.32,.72,.32,1)}
+@keyframes chatIn{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:none}}
+.chat-head{display:flex;align-items:center;gap:11px;padding:12px 14px;background:#202c33;border-bottom:1px solid rgba(255,255,255,.06)}
+.chat-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(140deg,#25d366,#0f8a4a);display:grid;place-items:center;
+  font-weight:800;font-size:12px;color:#04240f;flex:0 0 auto}
+.chat-id{display:flex;flex-direction:column;line-height:1.2;min-width:0}
+.chat-id b{font-size:13.5px;color:#e9edef;font-weight:700}
+.chat-id small{font-size:11px;color:#8696a0}
+.chat-x{margin-left:auto;width:30px;height:30px;border-radius:8px;border:0;background:transparent;color:#8696a0;
+  font-size:20px;line-height:1;cursor:pointer}
+.chat-x:hover{background:rgba(255,255,255,.07);color:#e9edef}
+.chat-body{flex:1;overflow-y:auto;padding:16px 14px;display:flex;flex-direction:column;gap:8px;
+  background:#0b141a;background-image:radial-gradient(rgba(255,255,255,.035) 1px,transparent 1px);background-size:16px 16px}
+.msg{max-width:84%;padding:9px 12px;border-radius:12px;font-size:13.5px;line-height:1.45;color:#e9edef;position:relative;
+  animation:msgIn .18s ease-out}
+@keyframes msgIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.msg.bot{background:#202c33;border-top-left-radius:4px;align-self:flex-start}
+.msg.user{background:#005c4b;border-top-right-radius:4px;align-self:flex-end}
+.msg.sys{align-self:center;background:rgba(255,255,255,.07);color:#aebac1;font-size:11.5px;padding:5px 10px;border-radius:8px}
+.msg b{font-weight:700}
+.typing{align-self:flex-start;background:#202c33;border-radius:12px;border-top-left-radius:4px;padding:11px 14px;display:flex;gap:4px}
+.typing i{width:6px;height:6px;border-radius:50%;background:#8696a0;animation:blink 1.2s infinite}
+.typing i:nth-child(2){animation-delay:.2s}.typing i:nth-child(3){animation-delay:.4s}
+@keyframes blink{0%,60%,100%{opacity:.25}30%{opacity:1}}
+.chat-summary{border:1px solid rgba(255,255,255,.14);border-radius:12px;background:#111b21;padding:11px 13px;font-size:12.5px;
+  color:#d1d7db;white-space:pre-wrap;font-family:ui-monospace,Menlo,monospace;line-height:1.55}
+.chat-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.chat-btn{display:inline-flex;align-items:center;gap:8px;border-radius:10px;border:1px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.06);color:#e9edef;font:600 12.5px/1 inherit;padding:10px 13px;cursor:pointer;text-decoration:none}
+.chat-btn:hover{background:rgba(255,255,255,.12)}
+.chat-btn.go{background:linear-gradient(135deg,#25d366,#12b355);color:#04240f;border-color:transparent;font-weight:800;
+  box-shadow:0 8px 22px rgba(37,211,102,.28)}
+.chat-btn.go:hover{filter:brightness(1.05)}
+.chat-btn svg{width:15px;height:15px}
+.chat-progress{display:flex;align-items:center;gap:10px;padding:8px 14px;background:#111b21;border-top:1px solid rgba(255,255,255,.06)}
+.chat-progress span{font-size:10.5px;color:#8696a0;letter-spacing:.06em;font-variant-numeric:tabular-nums}
+.chat .bar{flex:1;height:4px;border-radius:99px;background:rgba(255,255,255,.1);overflow:hidden}
+.chat .bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#25d366,#12b355);transition:width .3s ease}
+.chat-chips{display:flex;gap:7px;flex-wrap:wrap;padding:0 14px 8px;background:#111b21}
+.chat-chips:empty{display:none}
+.chip{border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:#e9edef;border-radius:99px;
+  padding:8px 13px;font:600 12px/1 inherit;cursor:pointer;transition:all .14s ease}
+.chip:hover{background:rgba(37,211,102,.18);border-color:rgba(37,211,102,.5)}
+.chat-input{display:flex;gap:8px;padding:10px 12px;background:#111b21;border-top:1px solid rgba(255,255,255,.06)}
+.chat-input input{flex:1;background:#202c33;border:1px solid transparent;border-radius:99px;padding:11px 15px;color:#e9edef;
+  font:14px/1.3 inherit;outline:none;min-width:0}
+.chat-input input::placeholder{color:#8696a0}
+.chat-input input:focus{border-color:rgba(37,211,102,.55)}
+.chat-input button{width:42px;height:42px;flex:0 0 auto;border:0;border-radius:50%;background:#25d366;color:#04240f;
+  display:grid;place-items:center;cursor:pointer}
+.chat-input button svg{width:18px;height:18px}
+@media(max-width:560px){
+  .chat-overlay{padding:0;align-items:end}
+  .chat{width:100%;max-height:94vh;border-radius:20px 20px 0 0}
+}
+@media (prefers-reduced-motion: reduce){
+  .wa-float{animation:none}
+  .chat,.msg{animation:none}
+}
